@@ -1,0 +1,6 @@
+{
+  "name": "Jakarta Rush Hour",
+  "description": "Modern 2D top-down arcade vehicle shooter and roguelite survival game set in chaotic Jakarta traffic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

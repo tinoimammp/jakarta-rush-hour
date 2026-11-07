@@ -1,0 +1,33 @@
+:root {
+  --bg-navy: #0B101E;
+  --bg-panel: #131C31;
+  --bg-panel-elevated: #1C2844;
+  --asphalt-dark: #222734;
+  --asphalt-lane: #2D3446;
+  --hazard-yellow: #FACC15;
+  --hazard-amber: #F59E0B;
+  --danger-red: #EF4444;
+  --danger-orange: #F97316;
+  --ojol-green: #22C55E;
+  --ojol-dark-green: #15803D;
+  --energy-cyan: #06B6D4;
+  --xp-purple: #A855F7;
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --border-subtle: rgba(148, 163, 184, 0.22);
+
+  --font-display: 'Outfit', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Responsive Design Tokens */
+  --space-xs: clamp(4px, 0.8vw, 8px);
+  --space-sm: clamp(8px, 1vw, 12px);
+  --space-md: clamp(12px, 2vw, 20px);
+  --space-lg: clamp(20px, 3vw, 32px);
+
+  --font-body: clamp(13px, 1.2vw, 16px);
+  --font-heading: clamp(20px, 3vw, 36px);
+
+  --control-height: 44px;
+}

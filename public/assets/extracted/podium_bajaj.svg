@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bajajGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F97316" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#F97316" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bajajBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FB923C"/>
+      <stop offset="50%" stop-color="#EA580C"/>
+      <stop offset="100%" stop-color="#9A3412"/>
+    </linearGradient>
+    <linearGradient id="bajajRoof" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="bajajCyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#0284C7"/>
+    </linearGradient>
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E0F2FE" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.65"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="160" cy="195" rx="125" ry="18" fill="#000000" opacity="0.6"/>
+
+  <!-- Left Rear Wheel -->
+  <ellipse cx="230" cy="172" rx="26" ry="26" fill="#0F172A" stroke="#475569" stroke-width="4"/>
+  <ellipse cx="230" cy="172" rx="14" ry="14" fill="#64748B" stroke="#CBD5E1" stroke-width="3"/>
+  <circle cx="230" cy="172" r="5" fill="#0F172A"/>
+
+  <!-- Front Single Wheel (front left) -->
+  <ellipse cx="78" cy="175" rx="22" ry="22" fill="#0F172A" stroke="#475569" stroke-width="4"/>
+  <ellipse cx="78" cy="175" rx="12" ry="12" fill="#64748B" stroke="#CBD5E1" stroke-width="3"/>
+  <circle cx="78" cy="175" r="4" fill="#0F172A"/>
+
+  <!-- Front Fork -->
+  <path d="M78 175 L95 130 L108 132 L90 178 Z" fill="#94A3B8" stroke="#0F172A" stroke-width="2"/>
+
+  <!-- Main Orange/Cyan Body Hull -->
+  <path d="M52 148 Q65 110 98 108 L225 108 Q258 112 262 142 L258 174 Q240 180 215 178 L120 178 Q75 180 52 148 Z" fill="url(#bajajBody)" stroke="#0F172A" stroke-width="4"/>
+
+  <!-- Lower Cyan Stripe (BBG Theme) -->
+  <path d="M58 152 Q75 138 120 138 L252 138 L248 155 L65 160 Z" fill="url(#bajajCyan)" stroke="#0F172A" stroke-width="2"/>
+  <text x="155" y="150" font-family="Outfit, sans-serif" font-weight="900" font-size="11" fill="#FFFFFF" letter-spacing="1">BAJAJ GAS BBG</text>
+
+  <!-- Open Doorway & Cabin Interior -->
+  <path d="M125 78 L195 78 L195 145 L130 145 Z" fill="#0F172A" stroke="#0F172A" stroke-width="3"/>
+  <!-- Driver Seat & Handlebar -->
+  <path d="M102 118 L122 118 L126 135 L106 135 Z" fill="#334155"/>
+  <path d="M96 112 L112 112" stroke="#E2E8F0" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Black Canvas Roof & Pillars -->
+  <path d="M85 78 Q155 70 248 76 L252 88 Q165 82 85 88 Z" fill="url(#bajajRoof)" stroke="#0F172A" stroke-width="3"/>
+  <path d="M88 82 Q120 45 165 42 L238 48 Q258 56 260 78 L250 115 Q245 78 228 78 L102 78 Q82 92 85 118 L76 118 Q72 88 88 82 Z" fill="url(#bajajRoof)" stroke="#0F172A" stroke-width="3.5"/>
+
+  <!-- Windshield with Wiper -->
+  <path d="M78 118 L92 84 L126 84 L118 118 Z" fill="url(#glassGrad)" stroke="#0F172A" stroke-width="3"/>
+  <line x1="98" y1="116" x2="108" y2="92" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Big Chromed Round Headlight with Yellow Beam -->
+  <ellipse cx="50" cy="138" rx="10" ry="12" fill="#FEF08A" stroke="#0F172A" stroke-width="3"/>
+  <ellipse cx="48" cy="138" rx="5" ry="7" fill="#FFFFFF"/>
+  <polygon points="42,138 0,110 0,166" fill="#FEF08A" opacity="0.35"/>
+
+  <!-- Chrome Front Bumper -->
+  <path d="M42 155 Q48 168 62 170" stroke="#CBD5E1" stroke-width="5" stroke-linecap="round"/>
+  <path d="M42 155 Q48 168 62 170" stroke="#0F172A" stroke-width="1.5" fill="none"/>
+
+  <!-- Badge B-303 -->
+  <rect x="56" y="166" width="36" height="12" rx="3" fill="#0F172A"/>
+  <text x="74" y="175" font-family="monospace" font-weight="900" font-size="8" fill="#FACC15" text-anchor="middle">B 303</text>
+</svg>

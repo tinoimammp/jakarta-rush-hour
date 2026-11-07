@@ -1,0 +1,50 @@
+# Jakarta Rush Hour on a VPS: the game and its Postgres database. Nginx on the host is the front door.
+# The app is published on 127.0.0.1:6100 only: Nginx reaches it, the internet does not.
+#
+#   cp .env.example .env     # then fill in POSTGRES_PASSWORD
+#   docker compose up -d --build
+#
+name: jakarta-rush-hour
+
+services:
+  app:
+    build: .
+    image: jakarta-rush-hour:1.0.0
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      PORT: "3000"
+      TRUST_PROXY: "1"
+      DATABASE_URL: postgres://${POSTGRES_USER:-jakarta_user}:${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}@db:5432/${POSTGRES_DB:-jakarta_rush_db}
+    ports:
+      - "127.0.0.1:6100:3000"
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://localhost:3000/').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      start_period: 20s
+      retries: 3
+
+  db:
+    image: postgres:17
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-jakarta_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:-jakarta_rush_db}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    # no "ports:" on purpose: the database is reachable only from the app container
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-jakarta_user} -d ${POSTGRES_DB:-jakarta_rush_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:

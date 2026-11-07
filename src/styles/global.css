@@ -1,0 +1,173 @@
+@import './tokens.css';
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  height: 100dvh;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-navy);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+.game-container {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  .mobile-controls {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+    padding-left: max(0.5rem, env(safe-area-inset-left));
+    padding-right: max(0.5rem, env(safe-area-inset-right));
+  }
+
+  .safe-area-pad {
+    padding-top: max(0.5rem, env(safe-area-inset-top));
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+    padding-right: max(0.75rem, env(safe-area-inset-right));
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Hazard Warning Stripes */
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #FACC15,
+    #FACC15 14px,
+    #111827 14px,
+    #111827 28px
+  );
+}
+
+/* Glossy Skewed Yellow Arcade Primary Button (matching MAIN / LANJUTKAN / COBA LAGI) */
+.btn-arcade-yellow {
+  position: relative;
+  min-height: var(--control-height);
+  transform: skewX(-10deg);
+  background: linear-gradient(180deg, #FEF08A 0%, #FACC15 48%, #EAB308 52%, #CA8A04 100%);
+  border: 2.5px solid #1E293B;
+  box-shadow:
+    inset 0 2px 0 rgba(255, 255, 255, 0.75),
+    inset 0 -3px 0 rgba(161, 98, 7, 0.75),
+    0 5px 14px rgba(0, 0, 0, 0.65);
+  transition: transform 140ms ease, filter 140ms ease;
+}
+
+.btn-arcade-yellow:hover {
+  filter: brightness(1.07);
+  transform: skewX(-10deg) translateY(-1px);
+}
+
+.btn-arcade-yellow:active {
+  transform: skewX(-10deg) translateY(2px);
+}
+
+.btn-arcade-yellow > * {
+  transform: skewX(10deg);
+}
+
+/* Skewed Dark Metallic Secondary Button (matching GARASI / PENGATURAN / CARA MAIN / RESTART / MENU UTAMA) */
+.btn-arcade-dark {
+  position: relative;
+  min-height: var(--control-height);
+  transform: skewX(-10deg);
+  background: linear-gradient(180deg, #2B364B 0%, #1F2839 50%, #161E2E 100%);
+  border: 2px solid #64748B;
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.22),
+    inset 0 -2px 0 rgba(9, 13, 22, 0.8),
+    0 4px 12px rgba(0, 0, 0, 0.65);
+  transition: transform 140ms ease, filter 140ms ease, border-color 140ms ease;
+}
+
+.btn-arcade-dark:hover {
+  filter: brightness(1.14);
+  border-color: #94A3B8;
+  transform: skewX(-10deg) translateY(-1px);
+}
+
+.btn-arcade-dark:active {
+  transform: skewX(-10deg) translateY(2px);
+}
+
+.btn-arcade-dark > * {
+  transform: skewX(10deg);
+}
+
+/* Glowing Yellow Progress Bar Fill (matching Garage stat bars) */
+.stat-bar-glow {
+  background: linear-gradient(90deg, #D97706 0%, #FACC15 65%, #FEF9C3 100%);
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.65);
+}
+
+/* Arcade slanted title shadow */
+.arcade-title-shadow {
+  text-shadow:
+    0 4px 0 #000000,
+    0 8px 20px rgba(0, 0, 0, 0.85);
+}
+
+.arcade-subtitle-shadow {
+  text-shadow:
+    0 3px 0 #7C2D12,
+    0 6px 14px rgba(0, 0, 0, 0.9);
+}
+
+/* Hide scrollbars on horizontal pill/tab strips while keeping scroll functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(250, 204, 21, 0.65);
+}

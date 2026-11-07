@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 210" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FEF08A"/>
+      <stop offset="30%" stop-color="#FACC15"/>
+      <stop offset="70%" stop-color="#CA8A04"/>
+      <stop offset="100%" stop-color="#713F12"/>
+    </linearGradient>
+    <linearGradient id="goldCarbon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="hyperGlass" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C084FC" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="170" cy="182" rx="145" ry="18" fill="#000000" opacity="0.65"/>
+  <!-- Gold Underglow Neon -->
+  <ellipse cx="170" cy="180" rx="130" ry="12" fill="#FACC15" opacity="0.4"/>
+
+  <!-- Rear Wheel -->
+  <ellipse cx="255" cy="156" rx="28" ry="28" fill="#020617" stroke="#334155" stroke-width="4"/>
+  <ellipse cx="255" cy="156" rx="16" ry="16" fill="url(#goldBody)" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="255" cy="156" r="6" fill="#020617"/>
+
+  <!-- Front Wheel -->
+  <ellipse cx="88" cy="156" rx="26" ry="26" fill="#020617" stroke="#334155" stroke-width="4"/>
+  <ellipse cx="88" cy="156" rx="15" ry="15" fill="url(#goldBody)" stroke="#0F172A" stroke-width="2"/>
+  <circle cx="88" cy="156" r="5" fill="#020617"/>
+
+  <!-- Rear Carbon GT Wing -->
+  <path d="M260 92 L298 90 L310 98 L268 100 Z" fill="url(#goldCarbon)" stroke="#0F172A" stroke-width="3"/>
+  <path d="M272 100 L275 125 L268 125 Z" fill="#020617"/>
+
+  <!-- Main Aerodynamic Hypercar Body -->
+  <path d="M22 152 Q35 140 70 138 L115 135 Q135 110 185 106 L248 116 Q285 125 305 142 L298 160 Q265 168 220 166 L120 166 Q65 168 22 152 Z" fill="url(#goldBody)" stroke="#0F172A" stroke-width="4"/>
+
+  <!-- Carbon Fiber Side Skirt & Front Splitter -->
+  <path d="M16 154 L75 152 L120 166 L235 166 L305 154 L308 162 L225 172 L115 172 L15 159 Z" fill="url(#goldCarbon)" stroke="#0F172A" stroke-width="2.5"/>
+
+  <!-- Jet Cockpit Canopy Glass -->
+  <path d="M108 134 Q135 108 175 108 L228 116 Q235 132 232 135 L120 136 Z" fill="url(#hyperGlass)" stroke="#0F172A" stroke-width="3"/>
+
+  <!-- Laser LED Headlights (Sharp DRL) -->
+  <polygon points="36,145 68,140 52,148 34,149" fill="#38BDF8" stroke="#0F172A" stroke-width="1.5"/>
+  <polygon points="40,146 64,142 54,147" fill="#FFFFFF"/>
+  <polygon points="34,148 0,135 0,162" fill="#38BDF8" opacity="0.3"/>
+
+  <!-- Gold VIP Plaque "B 1 BOS" -->
+  <rect x="28" y="152" width="34" height="10" rx="2" fill="#0F172A" stroke="#FEF08A" stroke-width="1"/>
+  <text x="45" y="160" font-family="monospace" font-weight="900" font-size="7" fill="#FEF08A" text-anchor="middle">B 1 BOS</text>
+
+  <!-- Side Air Intake Scoop -->
+  <polygon points="205,138 238,138 230,154 200,154" fill="#020617" stroke="#713F12" stroke-width="2"/>
+  <path d="M202 142 L234 142" stroke="#FACC15" stroke-width="1.5"/>
+</svg>
